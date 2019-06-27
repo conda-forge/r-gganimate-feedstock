@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = '1.0.3' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,9 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gganimate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gganimate/gganimate_{{ version }}.tar.gz
-  sha256: 02f6fdd12cc8a4b1fb3f3d097c1470aff8989036724d482b95e142959e15c07f
+  sha256: 909158cb3233794434341f505ae3dc3fcc6ed1f4780c121d71727f806527fd59
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
   noarch: generic
@@ -23,7 +22,7 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-ggplot2 >=3.0.0
@@ -68,9 +67,9 @@ extra:
 # Package: gganimate
 # Type: Package
 # Title: A Grammar of Animated Graphics
-# Version: 1.0.0
-# Date: 2019-01-02
-# Authors@R: c(person("Thomas Lin", "Pedersen", email = "thomasp85@gmail.com", role = c("aut", "cre")), person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut")))
+# Version: 1.0.3
+# Date: 2019-03-03
+# Authors@R:  c(person("Thomas Lin", "Pedersen", email = "thomasp85@gmail.com", role = c("aut", "cre"),  comment = c(ORCID = "0000-0002-5147-4711")), person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut")), person("RStudio", role = "cph"))
 # Maintainer: Thomas Lin Pedersen <thomasp85@gmail.com>
 # Description: The grammar of graphics as implemented in the 'ggplot2' package has been successful in providing a powerful API for creating static  visualisation. In order to extend the API for animated graphics this package provides a completely new set of grammar, fully compatible with 'ggplot2'  for specifying transitions and animations in a flexible and extensible way.
 # License: MIT + file LICENSE
@@ -83,9 +82,9 @@ extra:
 # URL: http://github.com/thomasp85/gganimate
 # BugReports: http://github.com/thomasp85/gganimate/issues
 # Imports: stringi, tweenr (>= 1.0.1), grid, rlang, glue, progress, plyr, scales, grDevices, utils
-# Collate: 'aaa.R' 'anim_save.R' 'animate.R' 'animation_store.R' 'ease-aes.R' 'gganim.R' 'gganimate-ggproto.R' 'gganimate-package.r' 'ggplot2_reimpl.R' 'group_column.R' 'layer_type.R' 'match_shapes.R' 'plot-build.R' 'post_process.R' 'renderers.R' 'scene.R' 'shadow-.R' 'shadow-mark.R' 'shadow-null.R' 'shadow-trail.R' 'shadow-wake.R' 'transformr.R' 'transition-.R' 'transition-components.R' 'transition-events.R' 'transition-filter.R' 'transition-manual.R' 'transition-layers.R' 'transition-null.R' 'transition-states.R' 'transition-time.R' 'transition_reveal.R' 'transmute-.R' 'transmute-enter.R' 'transmute-exit.R' 'transmuters.R' 'tween_before_stat.R' 'view-.R' 'view-follow.R' 'view-static.R' 'view-step.R' 'view-step-manual.R' 'view-zoom.R' 'view-zoom-manual.R'
+# Collate: 'aaa.R' 'anim_save.R' 'animate.R' 'animation_store.R' 'ease-aes.R' 'gganim.R' 'gganimate-ggproto.R' 'gganimate-package.r' 'ggplot2_reimpl.R' 'group_column.R' 'layer_type.R' 'match_shapes.R' 'plot-build.R' 'post_process.R' 'renderers.R' 'scene.R' 'shadow-.R' 'shadow-mark.R' 'shadow-null.R' 'shadow-trail.R' 'shadow-wake.R' 'transformr.R' 'transition-.R' 'transition-components.R' 'transition-events.R' 'transition-filter.R' 'transition-manual.R' 'transition-layers.R' 'transition-null.R' 'transition-states.R' 'transition-time.R' 'transition_reveal.R' 'transmute-.R' 'transmute-enter.R' 'transmute-exit.R' 'transmuters.R' 'tween_before_stat.R' 'view-.R' 'view-follow.R' 'view-static.R' 'view-step.R' 'view-step-manual.R' 'view-zoom.R' 'view-zoom-manual.R' 'zzz.R'
 # NeedsCompilation: no
-# Packaged: 2019-01-02 16:02:20 UTC; thomas
-# Author: Thomas Lin Pedersen [aut, cre], David Robinson [aut]
+# Packaged: 2019-04-02 18:49:10 UTC; thomas
+# Author: Thomas Lin Pedersen [aut, cre] (<https://orcid.org/0000-0002-5147-4711>), David Robinson [aut], RStudio [cph]
 # Repository: CRAN
-# Date/Publication: 2019-01-02 23:50:07 UTC
+# Date/Publication: 2019-04-02 19:10:02 UTC
