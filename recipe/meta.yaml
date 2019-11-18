@@ -1,4 +1,4 @@
-{% set version = '1.0.3' %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gganimate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gganimate/gganimate_{{ version }}.tar.gz
-  sha256: 909158cb3233794434341f505ae3dc3fcc6ed1f4780c121d71727f806527fd59
+  sha256: ecee2a5ecec63fbeaef774272833da77f6f97c4ca9db760cdc844dd5ad72457c
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
