@@ -5,7 +5,7 @@ Home: http://github.com/thomasp85/gganimate
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The grammar of graphics as implemented in the 'ggplot2' package has been successful in providing a powerful API for creating static  visualisation. In order to extend the API for animated graphics this package provides a completely new set of grammar, fully compatible with 'ggplot2'  for specifying transitions and animations in a flexible and extensible way.
 
