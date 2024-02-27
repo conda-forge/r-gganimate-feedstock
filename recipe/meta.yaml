@@ -1,4 +1,4 @@
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gganimate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gganimate/gganimate_{{ version }}.tar.gz
-  sha256: a12d865ddecea761e8f12bdc3bfdb78642f7ab2d53b78940e1290c9071d24bc9
+  sha256: bfca4c0c085933a1d97dd6c3b02f64049e1b722ed8fa9bf14880c0938e9fd604
 
 build:
   merge_build_host: true  # [win]
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -53,7 +53,7 @@ about:
   summary: The grammar of graphics as implemented in the 'ggplot2' package has been successful in providing a powerful API for creating static  visualisation. In order to extend the API for animated graphics this package provides a completely new set of grammar, fully compatible with 'ggplot2'  for specifying transitions
     and animations in a flexible and extensible way.
   license_family: MIT
-  license_file: 
+  license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
