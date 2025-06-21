@@ -1,4 +1,4 @@
-{% set version = "1.0.9" %}
+{% set version = "1.0.10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gganimate_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gganimate/gganimate_{{ version }}.tar.gz
-  sha256: bfca4c0c085933a1d97dd6c3b02f64049e1b722ed8fa9bf14880c0938e9fd604
+  sha256: 9dec6c4ee494bf8cffd18daeefdb9de20f54b5d2c107270a21a49529041e8ab9
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
